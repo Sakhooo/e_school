@@ -24,13 +24,11 @@ public class PupilsController {
 
     @PostMapping("/save")
     private List<Pupils> save(@RequestBody Pupils pupils){
-        System.out.println("sadsad");
-        System.out.println(pupils);
         pupilsService.savePupils(pupils);
         return pupilsMapper.findAll();
     }
 
-    @PutMapping("update")
+    @PutMapping("/update")
     private List<Pupils> update(@RequestBody Pupils pupils){
         pupilsService.update(pupils);
         return pupilsMapper.findAll();
@@ -38,8 +36,6 @@ public class PupilsController {
 
     @DeleteMapping("/delete/{id}")
     private List<Pupils> delete(@PathVariable int id){
-        System.out.println("sadsadasdsafasf");
-        System.out.println(id);
         pupilsService.delete(id);
         return pupilsMapper.findAll();
     }

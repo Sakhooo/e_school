@@ -30,8 +30,7 @@ public class PupilsServiceimpl implements PupilsService {
 
     @Override
     public List<Pupils> allPupils() {
-        List<Pupils> pupilsList= pupilsMapper.findAll();
-        return pupilsList;
+        return pupilsMapper.findAll();
     }
 
 }
